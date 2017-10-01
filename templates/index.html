@@ -11,9 +11,20 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
-    <h1>FlaskBot</h1>
+    <header>
+        <h1>FlaskBot</h1>
+    </header>
 
-    <input type="text">
+    <div class="wrapper">
+        <div class="log">
+            <ul></ul>
+        </div>
+
+        <form class="form" action="#">
+            <input class="input" type="text" placeholder="Type your input here!">
+            <button class="submit" type="submit">Submit!</button>
+        </form>
+    </div>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>

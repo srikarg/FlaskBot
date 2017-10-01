@@ -8,23 +8,19 @@ html, body {
     height: 100%;
 }
 
-html {
-    font-size: 62.5%;
-}
-
 body {
-    font: 400 1.8rem/1.6875 'Hind', sans-serif;
-    font: 400 18px/1.6875 'Hind', sans-serif;
+    font-family: 'Hind', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6875;
 }
 
 h1, h2, h3, h4, h5, h6, ul, ol, blockquote, p {
     margin: 0 0 20px 0;
-    margin: 0 0 2rem 0;
 }
 
 ul, ol {
     padding-left: 40px;
-    padding-left: 4rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,27 +29,72 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 36px;
-    font-size: 3.6rem;
 }
 
 h2 {
     font-size: 32px;
-    font-size: 3.2rem;
 }
 
 h3 {
     font-size: 26px;
-    font-size: 2.6rem;
 }
 
 h4 {
     font-size: 24px;
-    font-size: 2.4rem;
 }
 
 img {
     display: block;
     width: 100%;
     margin: 0 auto 20px auto;
-    margin: 0 auto 2rem auto;
+}
+
+header {
+    padding: 30px;
+    text-align: center;
+    background: #0A8DFF;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.log ul {
+    margin: 0;
+}
+
+.form .input {
+    font-family: 'Hind', sans-serif;
+    font-size: 18px;
+    margin: 0 auto;
+    display: block;
+    padding: 5px;
+    border: 1px solid #0A8DFF;
+    border-radius: 5px;
+}
+
+.form .input:focus {
+    box-shadow: 2px 2px 20px #0A8DFF;
+    outline: 0;
+}
+
+.form .submit {
+    display: block;
+    background: #0A8DFF;
+    font-size: 18px;
+    margin: 10px auto;
+    border: none;
+    padding: 5px;
+    color: white;
+    font-family: 'Hind', sans-serif;
+    width: 200px;
+    border-radius: 5px;
 }
