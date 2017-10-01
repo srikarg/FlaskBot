@@ -1,2 +1,3 @@
 # FlaskBot
-For USACS Hacker Hour on Web Development (10/6/17)
+
+This repository is for the USACS Hacker Hour on Web Development (held on 10/6/17).
