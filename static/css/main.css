@@ -69,6 +69,28 @@ header h1 {
 
 .log ul {
     margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.log ul li {
+    background: #0A8DFF;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.log .user {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.log .message {
+    display: block;
+    font-size: 18px;
 }
 
 .form .input {
