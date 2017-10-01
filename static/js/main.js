@@ -1,6 +1,7 @@
 $(function () {
     var logMessage = function (message, user, log) {
-        log.append('<li><span class="user">' + user === 'flaskbot' ? 'Flaskbot' : 'You' + '</span><span class="message">' + message + '</span></li>');
+        var user = user === 'flaskbot' ? 'Flaskbot' : 'You';
+        log.append('<li><span class="user">' + user + '</span><span class="message">' + message + '</span></li>');
         $('html, body').animate({
             scrollTop: $(document).height()
         }, '400');
