@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import commands
 
 app = Flask(__name__)
@@ -23,20 +23,18 @@ def server():
             elif msg.find('problem') != -1:
                 return 'If you have an issue, please use the !help command'
             else:
-                return 'Please enter a command. Enter !help if you want a list of commands'
+                return jsonify(message='Please enter a command. Enter !help if you want a list of commands')
         else:#is a command
             parse = msg.split(' ', 1)
             command = parse[0]
-            args = parse[1]
+            args = ''
+            if len(parse) > 1:
+                args = parse[1]
             if command == '!calc':
-                return commands.calc(args)
-            elif command == '!weather':
-                return commands.weather(args)
+                return jsonify(message=commands.calc(args))
             elif command == '!help':
                 return commands.help()
             elif command == '!xkcd':
-                return commands.xkcd(args)
-            elif command == '!image':
-                return commands.image(args)
+                return jsonify(message=commands.xkcd(args))
             else:
-                return 'Sorry, that command is invalid'
+                return jsonify(message='Sorry, that command is invalid')
