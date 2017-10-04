@@ -80,6 +80,7 @@ header h1 {
     border-radius: 5px;
     width: 100%;
     max-width: 500px;
+    color: white;
 }
 
 .log .user {

@@ -3,6 +3,9 @@ import commands
 
 app = Flask(__name__)
 
+def buildMessage(msg):
+    return jsonify(message=msg)
+
 @app.route('/', methods=['POST', 'GET'])
 def server():
     if request.method == 'GET':
@@ -10,31 +13,32 @@ def server():
     
     if request.method == 'POST':
         msg = request.form['message']
-        response = ""
-        #not a command
+        response = ''
+        # Not a command
         if msg.find('!') == -1:
             msg = msg.lower()
             if msg.find('thank') != -1:
-                return 'No need to thank me, I am built to serve you!'
+                return buildMessage('No need to thank me, I am built to serve you!')
             elif msg.find('hate') != -1:
-                return 'Why the hate :('
+                return buildMessage('Why the hate :(')
             elif msg.find('love') != -1:
-                return 'I love you too; now I need to get back to work!'
+                return buildMessage('I love you too; now I need to get back to work!')
             elif msg.find('problem') != -1:
-                return 'If you have an issue, please use the !help command'
+                return buildMessage('If you have an issue, please use the !help command!')
             else:
-                return jsonify(message='Please enter a command. Enter !help if you want a list of commands')
-        else:#is a command
+                return buildMessage('Please enter a command. Enter !help if you want a list of commands!')
+        # Is a command
+        else:
             parse = msg.split(' ', 1)
             command = parse[0]
             args = ''
             if len(parse) > 1:
                 args = parse[1]
             if command == '!calc':
-                return jsonify(message=commands.calc(args))
+                return buildMessage(commands.calc(args))
             elif command == '!help':
-                return commands.help()
+                return buildMessage(commands.help())
             elif command == '!xkcd':
-                return jsonify(message=commands.xkcd(args))
+                return buildMessage(commands.xkcd(args))
             else:
-                return jsonify(message='Sorry, that command is invalid')
+                return buildMessage('Sorry, that command is invalid!')
