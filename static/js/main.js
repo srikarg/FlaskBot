@@ -1,4 +1,4 @@
-$(function () {
+$(document).ready(function() {
     var logMessage = function (message, user, log) {
         var user = user === 'flaskbot' ? 'Flaskbot' : 'You';
         log.append('<li><span class="user">' + user + '</span><span class="message">' + message + '</span></li>');

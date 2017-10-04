@@ -1,0 +1,11 @@
+1. Install Python by following the appropriate guide for your OS here: http://docs.python-guide.org/en/latest/starting/installation/.
+
+2. Install virtualenv following the guide here: https://virtualenv.pypa.io/en/stable/installation/
+
+3. Create a new virtualenv following this guide: https://virtualenv.pypa.io/en/stable/userguide/#usage
+
+4. Make sure you activate the virtualenv using "source bin/activate" if you're on a Linux/Mac or by using the "activate" shell script in the created folder if you're on a Windows.
+
+5. Install the dependencies with "pip install -r requirements.txt"
+
+6. Unzip the given zip file and move the contents into the created folder.
